@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Yono Best Games</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111827, #312e81);
+      color: white;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d1d5db;
+    }
+
+    .game-card {
+      max-width: 420px;
+      margin: 25px auto;
+      padding: 25px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .game-card h2 {
+      margin-bottom: 15px;
+    }
+
+    #score {
+      font-size: 50px;
+      font-weight: bold;
+      margin: 20px;
+    }
+
+    #tapButton {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: none;
+      background: #22c55e;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #15803d;
+      transition: 0.08s;
+    }
+
+    #tapButton:active {
+      transform: translateY(7px);
+      box-shadow: 0 1px 0 #15803d;
+    }
+
+    #resetButton {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      background: #ef4444;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎮 All Yono Best Games</h1>
+    <p>Play Free Online Games</p>
+  </header>
+
+  <main>
+    <div class="game-card">
+      <h2>🔥 Tap Challenge</h2>
+      <p>Tap the button and increase your score!</p>
+
+      <div id="score">0</div>
+
+      <button id="tapButton">TAP!</button>
+
+      <br>
+
+      <button id="resetButton">Reset Game</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 All Yono Best Games
+  </footer>
+
+  <script>
+    let score = 0;
+
+    const scoreDisplay = document.getElementById("score");
+    const tapButton = document.getElementById("tapButton");
+    const resetButton = document.getElementById("resetButton");
+
+    tapButton.addEventListener("click", function() {
+      score++;
+      scoreDisplay.textContent = score;
+    });
+
+    resetButton.addEventListener("click", function() {
+      score = 0;
+      scoreDisplay.textContent = score;
+    });
+  </script>
+
+</body>
+  </html>
